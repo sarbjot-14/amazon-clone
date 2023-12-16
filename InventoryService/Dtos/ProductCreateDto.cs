@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace InventoryService.Models
+namespace ProductService.Dtos
 {
-    public class Product
+    public class ProductCreateDto
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
