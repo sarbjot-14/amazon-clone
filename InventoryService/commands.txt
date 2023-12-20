@@ -1,0 +1,3 @@
+docker run -p 8080:80 -d sarbjots/inventoryservice
+
+ docker build -t sarbjots/inventoryservice . 

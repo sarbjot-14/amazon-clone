@@ -1,22 +1,35 @@
 using InventoryService.Data;
 using InventoryService.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProductService.Data
 {
     public static class PrepDb
     {
-        public static void PrepPopulation(IApplicationBuilder app)
+        public static void PrepPopulation(IApplicationBuilder app, bool IsDevelopment)
         {
+
 
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                SeedData(serviceScope.ServiceProvider.GetService<AppDbContext>());
+                SeedData(serviceScope.ServiceProvider.GetService<AppDbContext>(), IsDevelopment);
             }
 
         }
 
-        private static void SeedData(AppDbContext context)
+        private static void SeedData(AppDbContext context, bool IsDevelopment)
         {
+            if (!IsDevelopment)
+            {
+                try
+                {
+                    context.Database.Migrate();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Could not run migrations {ex.Message}");
+                }
+            }
 
             if (!context.Products.Any())
             {

@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: inventory-depl
+  name: order-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: inventoryservice
+      app: orderservice
   template:
     metadata:
       labels:
-        app: inventoryservice
+        app: orderservice
     spec:
       containers:
-        - name: inventoryservice
-          image: sarbjots/inventoryservice:latest
+        - name: orderservice
+          image: sarbjots/orderservice:latest
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: inventory-clusterip-srv
+  name: orders-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: inventoryservice
+    app: orderservice
   ports:
-    - name: inventoryservice
+    - name: orderservice
       protocol: TCP
       port: 80
       targetPort: 80
