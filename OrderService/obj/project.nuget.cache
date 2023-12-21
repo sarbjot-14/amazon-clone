@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0u2rzbrJ6FD3aHKKFXIs85nn1w+XoSXcWGf7SlEI3aHsGOuUArqBisBveMXiERQXLXEXKyOEnTyKvNCznvoWUA==",
+  "dgSpecHash": "S7pR4/5VfCkS4ZQfJM7BMvT8G9XqcDGpZtBoSGsq0BuMFiPI5pTQOCIJvDyijpeNIOfxdj1MvH7B53T8JC+VcQ==",
   "success": true,
   "projectFilePath": "/Users/sarbjot/Projects/Important/Amazon/OrderService/OrderService.csproj",
   "expectedPackageFiles": [
+    "/Users/sarbjot/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/sarbjot/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/microsoft.aspnetcore.openapi/7.0.11/microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
+    "/Users/sarbjot/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/microsoft.entityframeworkcore/7.0.0/microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0/microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.0/microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",

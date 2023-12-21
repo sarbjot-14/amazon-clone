@@ -40,3 +40,6 @@
 /Users/sarbjot/Projects/Important/Amazon/OrderService/obj/Debug/net7.0/OrderService.pdb
 /Users/sarbjot/Projects/Important/Amazon/OrderService/obj/Debug/net7.0/OrderService.genruntimeconfig.cache
 /Users/sarbjot/Projects/Important/Amazon/OrderService/obj/Debug/net7.0/ref/OrderService.dll
+/Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/appsettings.Production.json
+/Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/AutoMapper.dll
+/Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
