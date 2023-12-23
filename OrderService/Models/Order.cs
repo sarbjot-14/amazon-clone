@@ -16,5 +16,8 @@ namespace OrdersService.Models
 
         [Required]
         public decimal Total { get; set; }
+
+        [Required]
+        public int Quantity { get; set; }
     }
 }

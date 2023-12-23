@@ -43,3 +43,4 @@
 /Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/appsettings.Production.json
 /Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/AutoMapper.dll
 /Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/sarbjot/Projects/Important/Amazon/OrderService/bin/Debug/net7.0/RabbitMQ.Client.dll

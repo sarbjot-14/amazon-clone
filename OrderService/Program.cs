@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OrdersService.AsyncDataServices;
 using OrdersService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
+builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

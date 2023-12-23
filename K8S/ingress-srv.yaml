@@ -24,3 +24,10 @@ spec:
                 name: orders-clusterip-srv
                 port:
                   number: 80
+          - path: /api/orders
+            pathType: Prefix
+            backend:
+              service:
+                name: orders-clusterip-srv
+                port:
+                  number: 80

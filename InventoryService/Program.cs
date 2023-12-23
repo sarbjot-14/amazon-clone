@@ -1,6 +1,9 @@
+using InventoryService.AsyncDataServices;
 using InventoryService.Data;
+using InventoryService.EventProcessing;
 using Microsoft.EntityFrameworkCore;
 using ProductService.Data;
+using ProductService.EventProcessing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +28,8 @@ else
 }
 builder.Services.AddScoped<IProductRepo, ProductRepo>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddSingleton<IEventProcessor, EventProcesing>();
+builder.Services.AddHostedService<MessageBusSubscriber>();
 
 var app = builder.Build();
 

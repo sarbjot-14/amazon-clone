@@ -1,7 +1,6 @@
-namespace OrdersService.Dto
+namespace InventoryService.Models
 {
-
-    public class OrderReadDto
+    public class Order
     {
 
 
@@ -15,7 +14,10 @@ namespace OrdersService.Dto
 
 
         public decimal Total { get; set; }
+
+
         public int Quantity { get; set; }
+
 
     }
 }

@@ -1,4 +1,5 @@
 using AutoMapper;
+using InventoryService.Dto;
 using InventoryService.Models;
 using ProductService.Dtos;
 
@@ -11,7 +12,9 @@ namespace ProductService.Profiles
             CreateMap<Product, ProductReadDto>();
 
             CreateMap<ProductCreateDto, Product>();
-            
+
+            CreateMap<OrderPublishedDto, Order>();
+
         }
     }
 

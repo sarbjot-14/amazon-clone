@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S7pR4/5VfCkS4ZQfJM7BMvT8G9XqcDGpZtBoSGsq0BuMFiPI5pTQOCIJvDyijpeNIOfxdj1MvH7B53T8JC+VcQ==",
+  "dgSpecHash": "9tRWmySzA3nLSRPIrqcCzp19P+XUM32itqSEpUTjGzIdGXTViY3NxlnPd8TWpT3e2vSGVuHvkAe6+XANNmTTeg==",
   "success": true,
   "projectFilePath": "/Users/sarbjot/Projects/Important/Amazon/OrderService/OrderService.csproj",
   "expectedPackageFiles": [
@@ -28,13 +28,16 @@
     "/Users/sarbjot/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/sarbjot/.nuget/packages/rabbitmq.client/6.8.1/rabbitmq.client.6.8.1.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
+    "/Users/sarbjot/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
     "/Users/sarbjot/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/sarbjot/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
+    "/Users/sarbjot/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/sarbjot/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
