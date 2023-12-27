@@ -35,7 +35,7 @@ namespace InventoryService.EventProcessing
 
         private EventType DeterminedEvent(string notificationMessage)
         {
-            Console.WriteLine("--> Determining Event");
+            Console.WriteLine($"--> Determining Event {notificationMessage}");
 
             var eventType = JsonSerializer.Deserialize<GenericEventDto>(notificationMessage);
 

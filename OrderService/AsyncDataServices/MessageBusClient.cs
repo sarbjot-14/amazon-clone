@@ -59,6 +59,7 @@ namespace OrdersService.AsyncDataServices
 
         private void SendMessage(string message)
         {
+            Console.WriteLine($"sedning this message {message} ");
             var body = Encoding.UTF8.GetBytes(message);
             _channel.BasicPublish(exchange: "trigger", routingKey: "", basicProperties: null, body: body);
 
