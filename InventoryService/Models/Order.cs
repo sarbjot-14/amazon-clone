@@ -11,7 +11,9 @@ namespace InventoryService.Models
 
         public int UserId { get; set; }
 
+        public decimal ShippingCost { get; set; }
 
+        public decimal Taxes { get; set; }
 
         public decimal Total { get; set; }
 
