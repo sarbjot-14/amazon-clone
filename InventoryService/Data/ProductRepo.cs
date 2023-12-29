@@ -15,7 +15,8 @@ namespace ProductService.Data
         }
         public void CreateProduct(Product prod)
         {
-            if(prod == null){
+            if (prod == null)
+            {
                 throw new ArgumentNullException(nameof(prod));
             }
             _context.Products.Add(prod);
@@ -23,13 +24,29 @@ namespace ProductService.Data
 
         public Product GetProductById(int id)
         {
-            return _context.Products.FirstOrDefault(p=>p.Id == id);
+            return _context.Products.FirstOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<Product> GetProducts()
         {
             return _context.Products.ToList();
         }
+
+        public Product UpdateQuantity(int purchasedQuantity, int productId)
+        {
+            Product product = _context.Products.Single<Product>(p => p.Id == productId);
+            if (product != null)
+            {
+                product.Quantity -= purchasedQuantity;
+                if (product.Quantity < 0)
+                {
+                    product.Quantity = 0;
+                }
+            }
+            _context.SaveChanges();
+            return product;
+        }
+
 
         public bool SaveChanges()
         {

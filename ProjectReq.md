@@ -5,13 +5,13 @@ Product:
 - price
 - description
 - rating
-- number of reviews
+- number of ratings
 - imageurl
 - quantity
 - category
-- subcat
 - size
-- 
+- discount
+- company
 
 Order:
 - id
@@ -20,7 +20,6 @@ Order:
 - total
 - quantity
 - address
-- creditCardNumber
 
 
 User Requirements:

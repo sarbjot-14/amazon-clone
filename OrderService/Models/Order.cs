@@ -19,5 +19,13 @@ namespace OrdersService.Models
 
         [Required]
         public int Quantity { get; set; }
+
+        [Required]
+        public decimal ShippingCost { get; set; }
+
+        [Required]
+        public decimal Taxes { get; set; }
+
+
     }
 }

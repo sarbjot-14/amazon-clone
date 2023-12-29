@@ -62,6 +62,7 @@ namespace InventoryService.EventProcessing
                 {
                     var order = _mapper.Map<Order>(orderPublishedDto);
                     Console.WriteLine($"--> Updating the inventory now {JsonSerializer.Serialize(order)}");
+                    repo.UpdateQuantity(order.Quantity, order.ProductId);
                     repo.SaveChanges();
 
                 }
