@@ -39,7 +39,7 @@ namespace ProductService.Data
                 {
                     string mockJson = r.ReadToEnd();
                     var productData = JsonSerializer.Deserialize<List<Product>>(mockJson);
-
+                    //Console.WriteLine($"the data {JsonSerializer.Serialize(productData)}");
                     context.Products.AddRange(productData);
                     //context.Products.RemoveRange(context.Products);
 

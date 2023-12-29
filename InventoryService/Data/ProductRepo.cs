@@ -1,5 +1,6 @@
 using InventoryService.Data;
 using InventoryService.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProductService.Data
 {
@@ -45,6 +46,11 @@ namespace ProductService.Data
             }
             _context.SaveChanges();
             return product;
+        }
+
+        public void DeleteProducts()
+        {
+            _context.Products.ExecuteDelete();
         }
 
 

@@ -12,5 +12,7 @@ namespace ProductService.Data
         void CreateProduct(Product prod);
 
         Product UpdateQuantity(int purchasedQuantity, int productId);
+
+        public void DeleteProducts();
     }
 }

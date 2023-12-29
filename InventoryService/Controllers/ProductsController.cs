@@ -1,3 +1,4 @@
+using System.Text.Json;
 using AutoMapper;
 using InventoryService.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -44,10 +45,17 @@ namespace ProductsService.Controllers
             }
         }
 
+        [HttpDelete]
+        public void DeleteProducts()
+        {
+            _repository.DeleteProducts();
+        }
+
         [HttpPost]
         public ActionResult<ProductReadDto> CreateProduct(ProductCreateDto productCreateDto)
         {
             var product = _mapper.Map<Product>(productCreateDto);
+            //Console.WriteLine($"just seeting here {JsonSerializer.Serialize(product)}");
             _repository.CreateProduct(product);
             _repository.SaveChanges();
 
