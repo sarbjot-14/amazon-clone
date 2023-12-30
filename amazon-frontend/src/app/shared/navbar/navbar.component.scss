@@ -1,0 +1,86 @@
+.toolbar {
+  background-color: #221e20;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  height: 5rem;
+  align-items: center;
+  min-width: fit-content;
+  &__amazon-logo {
+    width: 150px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  &__location-logo {
+    width: 20px;
+  }
+  &__address-label {
+    color: #f9f9f9ba;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    line-height: 0.5rem;
+  }
+  &__value {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  &__search-container {
+    flex-grow: 1;
+    display: flex;
+  }
+  &__search {
+    width: 100%;
+    background-color: #ffffff;
+    height: 2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  &__search-icon {
+    background-color: #febd69;
+    color: rgb(73, 73, 73);
+    float: right;
+    padding: 0.2rem;
+    width: 2.8rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  &__account-label {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    line-height: 0.5rem;
+  }
+  &__returns-label {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    line-height: 0.5rem;
+  }
+  &__cart-container {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__cart-image {
+    width: 5rem;
+    margin-right: -1rem;
+  }
+  &__cart-value {
+    font-size: 1rem;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+  }
+  &__cart-ref {
+    position: relative;
+    border-color: red;
+    border-width: 1rem;
+  }
+  &__cart-quantity {
+    color: #ff9900;
+    position: absolute;
+    left: 2.3rem;
+    top: 0.4rem;
+  }
+}
