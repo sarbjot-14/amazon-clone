@@ -1,0 +1,11 @@
+<div class="showcase">
+  <h1 class="showcase__product-title">Browse quality jewellery for her</h1>
+  <div class="showcase__container">
+    <div class="showcase__product" *ngFor="let prod of localDisplay$ | async">
+      <!-- {{ prod.name }} -->
+
+      <img class="showcase__image" src="{{ prod.thumbnail }}" />
+      <h1 class="showcase__product-name">{{ prod.name }}</h1>
+    </div>
+  </div>
+</div>

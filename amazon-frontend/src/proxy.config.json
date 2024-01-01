@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "http://acme.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" }
+  }
+}

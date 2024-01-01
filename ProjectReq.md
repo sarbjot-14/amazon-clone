@@ -63,4 +63,3 @@ Views:
   - Review items and shipping
   - Total with taxes and shipping based on location
   - Arrival date
-- 
