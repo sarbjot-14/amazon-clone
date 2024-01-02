@@ -8,8 +8,10 @@
   &__directories {
     display: flex;
     justify-content: space-around;
-    width: 100vw;
-    padding: 3rem;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    max-width: 80rem;
   }
   &__column {
     display: flex;

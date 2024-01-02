@@ -1,0 +1,78 @@
+.carousel {
+  flex-grow: 1;
+  display: block;
+  overflow: hidden;
+  background-color: white;
+  margin: 1rem 20px;
+  &__title {
+    line-height: 1.3em !important;
+    font-size: 21px !important;
+    color: #0f1111 !important;
+    font-weight: 900 !important;
+    max-width: 300px;
+    height: 40px;
+    padding-left: 2rem;
+    padding-top: 2rem;
+  }
+  &__container {
+    display: block;
+    width: 100%;
+
+    background: white;
+    overflow-x: scroll;
+    padding: 10px;
+    margin: 0;
+    white-space: nowrap;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  &__item {
+    display: inline-block;
+    width: 200px;
+    padding: 2%;
+    height: 250px;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  &__image {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+  }
+  &__product-name {
+    line-height: 1.3em !important;
+    font-size: 14px !important;
+    word-break: normal;
+    color: #0f1111 !important;
+    font-weight: 600 !important;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem 0;
+  }
+  &__details {
+    //padding: 1rem;
+    padding: 0.5rem 0;
+  }
+  &__discount {
+    border-radius: 2px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 12px;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    padding: 6px 8px;
+    font-size: 13px !important;
+    color: white;
+    background-color: #cc2838;
+    margin-right: 3px;
+  }
+  &__deal {
+    font-size: 14px !important;
+    line-height: 16px !important;
+    font-weight: 900;
+    color: #cc2838;
+  }
+}

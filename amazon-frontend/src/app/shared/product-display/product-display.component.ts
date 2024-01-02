@@ -14,6 +14,9 @@ export class ProductDisplayComponent {
   @Input()
   productCategory: string | undefined;
 
+  @Input()
+  displayTitle: string | undefined;
+
   localDisplay$?: Observable<Product[]>;
 
   ngOnInit() {

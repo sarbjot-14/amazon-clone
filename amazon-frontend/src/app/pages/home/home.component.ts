@@ -26,20 +26,21 @@ export class HomeComponent {
 
   deals under $25
   */
-  public productDisplay1: string[] = [
-    'womens-jewellery',
-    'mens-shirts',
-    'tops',
-    'furniture',
+  public productDisplay1: any[] = [
+    { cat: 'womens-jewellery', title: 'Browse Jewellery for Her' },
+    { cat: 'mens-shirts', title: 'Great Deals on Mens Shirts' },
+    { cat: 'tops', title: 'Trendy Tops' },
+    { cat: 'furniture', title: 'Complete your Dream Space' },
   ];
-  public productDisplay2: string[] = [
-    'skincare',
-    'fragrances',
-    'laptops',
-    'smartphones',
+  public productDisplay2: any[] = [
+    { cat: 'skincare', title: 'Get the Ultimate Glow Up' },
+    { cat: 'fragrances', title: 'Scents for Everyone' },
+    { cat: 'laptops', title: 'Power your Workday with Powerful Laptops' },
+    { cat: 'smartphones', title: 'Upgrade your Smartphone' },
   ];
-  public catsDisplay1: string[] = [];
-  public smartphones: string[] = ['samsung', 'apple', 'oneplus', 'google'];
+  public catsDisplay1: any[] = [];
+  public catsDisplay2: any[] = [];
+
   public getScreenWidth: any;
   public getScreenHeight: any;
   public products$?: Observable<Product[]>;
@@ -66,9 +67,10 @@ export class HomeComponent {
   adjustDisplay = () => {
     if (this.getScreenWidth > 1450) {
       this.catsDisplay1 = this.productDisplay1.slice(0, 4);
+      this.catsDisplay2 = this.productDisplay2.slice(0, 4);
     } else {
-      console.log('making it smaller !!!!');
       this.catsDisplay1 = this.productDisplay1.slice(0, 3);
+      this.catsDisplay2 = this.productDisplay2.slice(0, 3);
     }
   };
 }

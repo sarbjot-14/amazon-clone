@@ -10,9 +10,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ProductDisplayComponent } from './shared/product-display/product-display.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ProductCarouselComponent } from './shared/product-carousel/product-carousel.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SearchPageComponent, ProductDisplayComponent, FooterComponent],
+  declarations: [AppComponent, HomeComponent, SearchPageComponent, ProductDisplayComponent, FooterComponent, ProductCarouselComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

@@ -1,12 +1,28 @@
 <div class="home">
   <div class="home__backdrop">
     <img class="home__backdrop-image" src="/assets/images/backdrop.jpg" />
-    <div class="home__cat-container">
-      <div class="home__cat" *ngFor="let prod of catsDisplay1">
-        <app-product-display
-          [productsDisplay$]="products$"
-          [productCategory]="prod"
-        ></app-product-display>
+    <div class="home__layout">
+      <div class="home__cat-container">
+        <div class="home__cat" *ngFor="let prod of catsDisplay1">
+          <app-product-display
+            [productsDisplay$]="products$"
+            [productCategory]="prod.cat"
+            [displayTitle]="prod.title"
+          ></app-product-display>
+        </div>
+      </div>
+      <app-product-carousel
+        [title]="'Top Deals'"
+        [productsDisplay$]="products$"
+      ></app-product-carousel>
+      <div class="home__cat-container">
+        <div class="home__cat" *ngFor="let prod of catsDisplay2">
+          <app-product-display
+            [productsDisplay$]="products$"
+            [productCategory]="prod.cat"
+            [displayTitle]="prod.title"
+          ></app-product-display>
+        </div>
       </div>
     </div>
   </div>
