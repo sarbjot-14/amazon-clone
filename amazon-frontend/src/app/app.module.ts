@@ -9,9 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ProductDisplayComponent } from './shared/product-display/product-display.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SearchPageComponent, ProductDisplayComponent],
+  declarations: [AppComponent, HomeComponent, SearchPageComponent, ProductDisplayComponent, FooterComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

@@ -1,0 +1,39 @@
+.footer {
+  background-color: #23303e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  &__directories {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 3rem;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__column-header {
+    font-weight: 800;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 16px;
+    margin: 6px 0 14px 0;
+  }
+  &__column-value {
+    color: #fff;
+    white-space: normal;
+    font-size: 14px;
+  }
+  &__line {
+    border: 0.1px solid grey;
+    width: 100vw;
+  }
+
+  &__logo {
+    padding: 30px;
+  }
+}
