@@ -13,8 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ProductCarouselComponent } from './shared/product-carousel/product-carousel.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument({ maxAge: 10 }),
+
   ],
   providers: [],
   bootstrap: [AppComponent],

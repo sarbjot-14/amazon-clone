@@ -62,10 +62,10 @@
           "options": { "proxyConfig": "src/proxy.config.json" },
           "configurations": {
             "production": {
-              "browserTarget": "amazon-frontend:build:production"
+              "buildTarget": "amazon-frontend:build:production"
             },
             "development": {
-              "browserTarget": "amazon-frontend:build:development"
+              "buildTarget": "amazon-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "amazon-frontend:build"
+            "buildTarget": "amazon-frontend:build"
           }
         },
         "test": {
