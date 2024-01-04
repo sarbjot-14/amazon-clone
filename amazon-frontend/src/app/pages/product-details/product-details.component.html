@@ -1,0 +1,136 @@
+<div class="details">
+  <div class="details__image">
+    <img
+      src="{{ (product$ | async)?.thumbnail }}"
+      alt=""
+      class="details__thumbnail"
+    />
+  </div>
+  <div class="details__info">
+    <h1 class="details__title">{{ (product$ | async)?.name }}</h1>
+    <p class="details__visit link">
+      Visit the {{ (product$ | async)?.company }} Store
+    </p>
+    <div class="details__ratings">
+      <span class="details__number"> {{ (product$ | async)?.rating | number:'1.1' }}</span>
+      <div class="details__stars">
+        <span *ngFor="let _ of [].constructor((product$ | async)?.rating)">
+          <img class="details__star" src="/assets/icons/filled-star.png" />
+        </span>
+        <span *ngFor="let _ of [].constructor((product$ | async)?.empty)">
+          <img class="details__star" src="/assets/icons/empty-star.png" />
+        </span>
+      </div>
+      <span class="details__reviews-amount link">154 ratings</span>
+    </div>
+    <p>400+ bought in past month</p>
+    <hr />
+    <div class="details__price">
+      <span class="details__discount"
+        >-{{ (product$ | async)?.discount }}%</span
+      >
+      <span class="details__price-amount">{{
+        (product$ | async)?.price | currency
+      }}</span>
+    </div>
+    <p class="details__rewards link">
+      Get $25 off your order instantly: Pay $49.52 $74.52 if approved for the
+      Amazon.ca Rewards Mastercard. No annual fee. Conditions apply.
+    </p>
+    <p class="details__alternate">
+      Available at a lower price from other sellers that may not offer free
+      Prime delivery.
+    </p>
+    <h1 class="details__add">Purchase options and add-ons</h1>
+    <hr />
+    <h3 class="details__plan">Payment plans</h3>
+    <p class="details__plan-details">
+      $13.53/mo (6 mo) at example APR of 30% (rates from 10-30% APR)
+    </p>
+    <hr />
+    <h1 class="details__about-title">About this item</h1>
+    <ul>
+      <li class="details__desc">
+        {{ (product$ | async)?.description }}
+      </li>
+      <li class="details__desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nulla
+        magnam veniam maxime mollitia qui expedita veritatis.
+      </li>
+      <li class="details__desc">
+        Adipisicing elit. Fugit, nulla, eos suscipit adipisci eius incidunt
+        reprehenderit delectus cumque ratione fuga praesentium mollitia
+        deserunt! Doloremque sed, nobis non minus esse deserunt.
+      </li>
+    </ul>
+  </div>
+
+  <div class="details__order">
+    <input type="checkbox" />
+    <span class="details__fast">
+      Yes, I want <b>fast, free delivery</b> with
+      <span class="details__prime link">Amazon Prime</span>
+    </span>
+    <div class="details__order-container">
+      <span class="details__price-amount">{{
+        (product$ | async)?.price | currency
+      }}</span>
+      <p class="details__delivery">
+        <span class="link">FREE delivery </span> <b>Saturday, January 20.</b>
+        <span class="link"> Details</span>
+      </p>
+      <p class="details__delivery">
+        <span class="link">Or fastest delivery </span>
+        <b>Tomorrow, January 10.</b> Order within 3 hrs 14 mins.
+      </p>
+      <p class="details__status">
+        {{
+          (product$ | async)?.quantity > 0
+            ? "In Stock"
+            : "Temporarily Out Of Stock"
+        }}
+      </p>
+      <span class="details__quantity-label">Quantity:</span>
+      <select title="Quantity">
+        <option *ngFor="let i of quantityArr" value="volvo">{{ i }}</option>
+      </select>
+      <button class="details__add-button">Add to Cart</button>
+      <button class="details__buy">Buy Now</button>
+      <table class="details__table">
+
+        <tr>
+          <td class="details__label ">Payment</td>
+          <td class="details__value link">
+            Secure transaction</td>
+      
+        </tr>
+        <tr>
+            <td class="details__label">Ships from</td>
+            <td class="details__value ">Amazon</td>
+        
+          </tr>
+   
+          <tr>
+            <td class="details__label" >Sold by</td>
+            <td class="details__value link">
+                DDJJME</td>
+        
+          </tr>
+   
+          <tr>
+            <td class="details__label">Returns</td>
+            <td class="details__value link">
+                Eligible for Return, Refund or Replacement within 30 days of receipt</td>
+        
+          </tr>
+     
+   
+      </table>
+      <input type="checkbox" />
+      <span class="details__fast">
+      Add gift options</span>
+
+    </div>
+  </div>
+  <!-- <p>{{ (product$ | async)?.description }}</p> -->
+</div>

@@ -5,7 +5,10 @@
   display: flex;
   justify-content: center;
 
-  padding-bottom: 120vh;
+  padding-bottom: 160vh;
+  @media screen and (min-width: 1500px) {
+    padding-bottom: 120vh !important;
+  }
 
   &__backdrop {
     width: 100vw;

@@ -1,0 +1,137 @@
+.details {
+  display: flex;
+  margin: auto;
+  width: 80vw;
+  padding: 3rem 1rem;
+
+  &__thumbnail {
+    width: 25rem;
+  }
+  &__info {
+    //padding-top: 2rem;
+  }
+
+  &__title {
+    word-break: break-word;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    font-weight: 500;
+  }
+  &__visit {
+    font-size: 14px;
+  }
+  &__ratings {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  &__number {
+    font-size: 1.5rem;
+  }
+  &__star {
+    width: 1.5rem;
+  }
+  &__reviews-amount {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  &__price {
+    padding: 10px 0px;
+  }
+  &__discount {
+    color: #cc0c39 !important;
+    font-weight: 400 !important;
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+  }
+  &__price-amount {
+    font-size: 1.9rem;
+    font-weight: 500;
+  }
+  &__dollar {
+    font-size: 1rem;
+  }
+  &__rewards {
+    font-size: 1rem;
+    padding: 5px 15px;
+  }
+  &__alternate {
+    font-weight: 500;
+  }
+  &__add {
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  &__plan {
+    font-weight: 900;
+  }
+  &__about-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 2px 0px;
+  }
+  &__order {
+    min-width: 200px;
+    max-width: 240px;
+    margin: 0px 10px;
+  }
+  &__fast {
+    padding: 15px 0px;
+  }
+  &__order-container {
+    padding: 20px 15px;
+    margin: 20px 0px;
+    width: 100%;
+    border: solid 0.9px rgb(96, 96, 96);
+  }
+  &__delivery {
+    padding-top: 0.8rem;
+    font-size: 1rem;
+  }
+  &__status {
+    color: #007600 !important;
+    font-size: 1.3rem !important;
+    line-height: 24px !important;
+    font-weight: 500;
+  }
+  &__add-button {
+    background-color: #ffd815;
+  }
+  &__buy {
+    background-color: #ffa41b;
+  }
+  &__table {
+    padding: 20px 0px;
+  }
+  &__label {
+    vertical-align: top;
+  }
+
+  &__value {
+    word-wrap: break-word;
+    //max-width: 20px;
+  }
+}
+
+button {
+  width: 100%;
+  display: block;
+  max-width: 200px;
+  margin: auto;
+  padding: 10px 0px;
+  border-radius: 100px;
+  border: solid 0px transparent;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.link {
+  cursor: pointer;
+  color: #307384;
+  font-weight: 500;
+}

@@ -2,8 +2,10 @@
   <h1 class="showcase__product-title">{{ displayTitle }}</h1>
   <div class="showcase__container">
     <div class="showcase__product" *ngFor="let prod of localDisplay$ | async">
-      <img class="showcase__image" src="{{ prod.thumbnail }}" />
-      <h1 class="showcase__product-name">{{ prod.name }}</h1>
+      <a routerLink="/product-details/{{ prod.Id }}">
+        <img class="showcase__image" src="{{ prod.thumbnail }}" />
+        <h1 class="showcase__product-name">{{ prod.name }}</h1>
+      </a>
     </div>
   </div>
 </div>
