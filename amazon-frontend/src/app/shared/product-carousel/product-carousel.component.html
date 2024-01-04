@@ -2,14 +2,18 @@
   <h1 class="carousel__title">{{ title }}</h1>
   <div class="carousel__container">
     <div class="carousel__item" *ngFor="let prod of productDeals$ | async">
-      <img class="carousel__image" src="{{ prod.thumbnail }}" />
-      <div class="carousel__details">
-        <div class="carousel__deal">
-          <span class="carousel__discount">Up to {{ prod.discount }}% off</span>
-          <span class="carousel__deal">Deal</span>
+      <a [routerLink]="['/product-details',prod.id]">
+        <img class="carousel__image" src="{{ prod.thumbnail }}" />
+        <div class="carousel__details">
+          <div class="carousel__deal">
+            <span class="carousel__discount"
+              >Up to {{ prod.discount }}% off</span
+            >
+            <span class="carousel__deal">Deal</span>
+          </div>
+          <h1 class="carousel__product-name">{{ prod.name }}</h1>
         </div>
-        <h1 class="carousel__product-name">{{ prod.name }}</h1>
-      </div>
+      </a>
     </div>
   </div>
 </div>

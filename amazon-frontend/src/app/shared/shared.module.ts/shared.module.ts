@@ -4,10 +4,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [NavbarComponent],
-  imports: [CommonModule, MatToolbarModule, MatIconModule],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, RouterModule],
   exports: [NavbarComponent],
 })
 export class SharedModule {}

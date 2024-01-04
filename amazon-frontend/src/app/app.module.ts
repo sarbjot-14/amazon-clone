@@ -12,15 +12,29 @@ import { ProductDisplayComponent } from './shared/product-display/product-displa
 import { FooterComponent } from './shared/footer/footer.component';
 import { ProductCarouselComponent } from './shared/product-carousel/product-carousel.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SearchPageComponent, ProductDisplayComponent, FooterComponent, ProductCarouselComponent, ProductDetailsComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    SearchPageComponent,
+    ProductDisplayComponent,
+    FooterComponent,
+    ProductCarouselComponent,
+    ProductDetailsComponent,
+    CartComponent,
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({ maxAge: 10 }),
   ],
   providers: [],
   bootstrap: [AppComponent],

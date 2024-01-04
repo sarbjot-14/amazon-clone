@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Observable, map, take, tap } from 'rxjs';
 import { Product } from 'src/app/models/product';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-display',

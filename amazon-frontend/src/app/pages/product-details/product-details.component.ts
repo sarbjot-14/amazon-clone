@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
+
+import { AppStateInterface } from 'src/app/models/appState.interface';
 
 @Component({
   selector: 'app-product-details',
@@ -13,8 +16,11 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductDetailsComponent {
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductsService
-  ) {}
+    private productService: ProductsService,
+  ) {
+   
+  }
+  cartProduct$?: Observable<any>;
   product$?: Observable<any>;
   quantityArr?: number[];
 
@@ -22,7 +28,6 @@ export class ProductDetailsComponent {
   //heroes = HEROES;
 
   ngOnInit() {
-    console.log('we running it', this.selectedId);
     this.selectedId = this.route.snapshot.paramMap.get('id');
     if (this.selectedId) {
       this.product$ = this.productService
@@ -39,9 +44,27 @@ export class ProductDetailsComponent {
     }
 
     this.product$
-      ?.pipe(map((p) => Array.from(Array(p.quantity+1).keys())))
+      ?.pipe(map((p) => Array.from(Array(p.quantity + 1).keys())))
       .subscribe((arr) => {
         this.quantityArr = arr.slice(1);
       });
+
+    this.product$?.subscribe((p) => {
+      console.log('dispathcing ', p);
+      
+    });
+
+    this.cartProduct$?.subscribe((ps) => {
+      console.log('it is the p', ps[0]);
+    });
+
+
+  }
+  addToCart(){
+    this.product$?.subscribe(p=>{
+    
+
+    })
+
   }
 }

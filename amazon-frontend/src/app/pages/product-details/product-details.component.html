@@ -12,7 +12,9 @@
       Visit the {{ (product$ | async)?.company }} Store
     </p>
     <div class="details__ratings">
-      <span class="details__number"> {{ (product$ | async)?.rating | number:'1.1' }}</span>
+      <span class="details__number">
+        {{ (product$ | async)?.rating | number : "1.1" }}</span
+      >
       <div class="details__stars">
         <span *ngFor="let _ of [].constructor((product$ | async)?.rating)">
           <img class="details__star" src="/assets/icons/filled-star.png" />
@@ -94,42 +96,34 @@
       <select title="Quantity">
         <option *ngFor="let i of quantityArr" value="volvo">{{ i }}</option>
       </select>
-      <button class="details__add-button">Add to Cart</button>
+      <button class="details__add-button" (click)="addToCart()">
+        Add to Cart
+      </button>
       <button class="details__buy">Buy Now</button>
       <table class="details__table">
-
         <tr>
-          <td class="details__label ">Payment</td>
-          <td class="details__value link">
-            Secure transaction</td>
-      
+          <td class="details__label">Payment</td>
+          <td class="details__value link">Secure transaction</td>
         </tr>
         <tr>
-            <td class="details__label">Ships from</td>
-            <td class="details__value ">Amazon</td>
-        
-          </tr>
-   
-          <tr>
-            <td class="details__label" >Sold by</td>
-            <td class="details__value link">
-                DDJJME</td>
-        
-          </tr>
-   
-          <tr>
-            <td class="details__label">Returns</td>
-            <td class="details__value link">
-                Eligible for Return, Refund or Replacement within 30 days of receipt</td>
-        
-          </tr>
-     
-   
+          <td class="details__label">Ships from</td>
+          <td class="details__value">Amazon</td>
+        </tr>
+
+        <tr>
+          <td class="details__label">Sold by</td>
+          <td class="details__value link">DDJJME</td>
+        </tr>
+
+        <tr>
+          <td class="details__label">Returns</td>
+          <td class="details__value link">
+            Eligible for Return, Refund or Replacement within 30 days of receipt
+          </td>
+        </tr>
       </table>
       <input type="checkbox" />
-      <span class="details__fast">
-      Add gift options</span>
-
+      <span class="details__fast"> Add gift options</span>
     </div>
   </div>
   <!-- <p>{{ (product$ | async)?.description }}</p> -->
