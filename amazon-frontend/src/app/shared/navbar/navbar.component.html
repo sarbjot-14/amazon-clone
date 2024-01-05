@@ -1,5 +1,7 @@
 <mat-toolbar class="toolbar">
-  <img src="/assets/images/amazon.png" class="toolbar__amazon-logo" />
+  <a routerLink="/">
+    <img src="/assets/images/amazon.png" class="toolbar__amazon-logo" />
+  </a>
   <div class="toolbar__address">
     <img src="/assets/images/location.svg" class="toolbar__location-logo" />
     <div>
@@ -22,13 +24,12 @@
     <h1 class="toolbar__value">& Orders</h1>
   </div>
   <a routerLink="/cart">
-
-  <div class="toolbar__cart-container">
-    <div class="toolbar__cart-ref">
-      <div class="toolbar__cart-quantity">6</div>
-      <img src="/assets/images/cart.svg" class="toolbar__cart-image" />
+    <div class="toolbar__cart-container">
+      <div class="toolbar__cart-ref">
+        <div class="toolbar__cart-quantity">{{ cartItemCount$ | async }}</div>
+        <img src="/assets/images/cart.svg" class="toolbar__cart-image" />
+      </div>
+      <h2 class="toolbar__cart-value"></h2>
     </div>
-    <h2 class="toolbar__cart-value">Cart</h2>
-  </div>
   </a>
 </mat-toolbar>

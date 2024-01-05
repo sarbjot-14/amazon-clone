@@ -1,0 +1,47 @@
+<div class="cart">
+  <div class="cart__item-container">
+    <input type="checkbox" checked />
+    <div class="cart__image">
+      <img src="{{ item?.thumbnail }}" alt="" class="cart__thumbnail" />
+    </div>
+    <div class="cart__details">
+      <h1 class="cart__item-title">{{ item?.name | titlecase }}</h1>
+      <h3 class="cart__status">In Stock</h3>
+      <h3 class="cart__meta">
+        Ships from and sold from <span class="link">Amazon.com</span>
+      </h3>
+      <h3 class="cart__meta">Eligible for FREE Shipping</h3>
+      <div>
+        <input class="cart__check" type="checkbox" />
+        <h3 class="cart__meta check-meta">This will be a gift</h3>
+      </div>
+      <div>
+        <input class="cart__check" type="checkbox" />
+        <h3 class="cart__meta check-meta">
+          Pay in 5 monthly payments of $240.00 per item
+        </h3>
+      </div>
+      <div class="cart__options">
+        <div>
+          <span class="cart__quantity-label">Qty:</span>
+          <select  (change)="onChange()" title="Quantity" [(ngModel)]="quantitySelected">
+            <option *ngFor="let i of quantities" value="{{ i }}">{{ i }}</option>
+          </select>
+        </div>
+        <!-- <h3 class="cart__quantity">{{ item.quantity }}</h3> -->
+        <div class="cart__vert-line"></div>
+        <h3 class="cart__option link">Delete</h3>
+        <div class="cart__vert-line"></div>
+        <h3 class="cart__option link">Save for later</h3>
+        <div class="cart__vert-line"></div>
+        <h3 class="cart__option link">More like this</h3>
+        <div class="cart__vert-line"></div>
+        <h3 class="cart__option link">Share</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart__price">
+    <h1 class="cart__price-value">{{ item?.price | currency}}</h1>
+  </div>
+</div>

@@ -6,6 +6,8 @@ import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 
 import { AppStateInterface } from 'src/app/models/appState.interface';
+import { Store } from '@ngrx/store';
+import { add } from 'src/app/store/items.actions';
 
 @Component({
   selector: 'app-product-details',
@@ -13,18 +15,17 @@ import { AppStateInterface } from 'src/app/models/appState.interface';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent {
+  quantitySelected: any = 1;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService,
-  ) {
-   
-  }
-  cartProduct$?: Observable<any>;
+    private store: Store<{ items: Product[] }>
+  ) {}
+
   product$?: Observable<any>;
   quantityArr?: number[];
 
   selectedId?: string | null;
-  //heroes = HEROES;
 
   ngOnInit() {
     this.selectedId = this.route.snapshot.paramMap.get('id');
@@ -47,23 +48,12 @@ export class ProductDetailsComponent {
       .subscribe((arr) => {
         this.quantityArr = arr.slice(1);
       });
-
-    this.product$?.subscribe((p) => {
-      console.log('dispathcing ', p);
-      
-    });
-
-    this.cartProduct$?.subscribe((ps) => {
-      console.log('it is the p', ps[0]);
-    });
-
-
   }
-  addToCart(){
-    this.product$?.subscribe(p=>{
-    
+  addToCart() {
+    this.product$?.subscribe((p) => {
+      p.number = parseInt(this.quantitySelected);
 
-    })
-
+      this.store.dispatch(add({ item: p }));
+    });
   }
 }

@@ -93,8 +93,8 @@
         }}
       </p>
       <span class="details__quantity-label">Quantity:</span>
-      <select title="Quantity">
-        <option *ngFor="let i of quantityArr" value="volvo">{{ i }}</option>
+      <select title="Quantity" [(ngModel)]="quantitySelected">
+        <option *ngFor="let i of quantityArr" value="{{ i }}">{{ i }}</option>
       </select>
       <button class="details__add-button" (click)="addToCart()">
         Add to Cart

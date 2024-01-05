@@ -9,4 +9,5 @@ export interface Product {
   category: string;
   discount: number;
   company: string;
+  number?: number;
 }

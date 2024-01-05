@@ -1,0 +1,36 @@
+.cart {
+  background-color: #eaeded;
+  padding: 2rem 0rem;
+
+  &__container {
+    margin: auto;
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+    width: 80%;
+    background-color: white;
+  }
+  &__divider {
+    border: 0.3px solid rgb(179, 179, 179);
+  }
+  &__sub {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  &__total {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__subtotal {
+    float: right;
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: #307384;
+  font-weight: 500;
+}
+
+.check-meta {
+  display: inline;
+}

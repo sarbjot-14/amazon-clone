@@ -14,6 +14,11 @@ import { ProductCarouselComponent } from './shared/product-carousel/product-caro
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
 
+import { StoreModule } from '@ngrx/store';
+import { itemsReducer } from './store/items.reducer';
+import { FormsModule } from '@angular/forms';
+import { CartItemComponent } from './shared/cart-item/cart-item.component';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +30,16 @@ import { CartComponent } from './pages/cart/cart.component';
     ProductCarouselComponent,
     ProductDetailsComponent,
     CartComponent,
+    CartItemComponent,
   ],
   imports: [
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({ items: itemsReducer })
 
   ],
   providers: [],

@@ -1,1 +1,22 @@
-<p>cart works!</p>
+<div class="cart">
+  <div class="cart__container">
+    <h1 class="cart__title">Shopping Cart</h1>
+    <span class="cart__price-label">Price</span>
+    <hr class="cart__divider" />
+    <div class="cart__list">
+      <div class="cart__item" *ngFor="let item of items$  |async">
+        <app-cart-item [item]="item"></app-cart-item>
+        <hr class="cart__divider" />
+      </div>
+    </div>
+    <div class="cart__subtotal">
+      <span class="cart__sub">Subtotal:</span
+      ><span class="cart__total">{{subtotal$ | async | currency}}</span>
+    </div>
+  </div>
+
+  <!-- <p>cart works!</p>
+<div *ngFor="let item of items$ | async">
+  {{ item.price }}
+</div> -->
+</div>
