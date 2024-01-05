@@ -1,22 +1,39 @@
 <div class="cart">
-  <div class="cart__container">
-    <h1 class="cart__title">Shopping Cart</h1>
-    <span class="cart__price-label">Price</span>
-    <hr class="cart__divider" />
-    <div class="cart__list">
-      <div class="cart__item" *ngFor="let item of items$  |async">
-        <app-cart-item [item]="item"></app-cart-item>
-        <hr class="cart__divider" />
+  <div class="cart__wrapper">
+    <div class="cart__container">
+      <h1 class="cart__title">{{(items$ | async)?.length!=0?'Shopping Cart':'Your Amazon Cart is empty.'}}</h1>
+      <span class="cart__price-label">Price</span>
+      <hr class="cart__divider" />
+      <div class="cart__list">
+        <div class="cart__item" *ngFor="let item of items$ | async">
+          <app-cart-item [item]="item"></app-cart-item>
+          <hr class="cart__divider" />
+        </div>
+      </div>
+      <div class="cart__subtotal">
+        <span class="cart__sub">Subtotal:</span
+        ><span class="cart__total">{{ subtotal$ | async | currency }}</span>
       </div>
     </div>
-    <div class="cart__subtotal">
-      <span class="cart__sub">Subtotal:</span
-      ><span class="cart__total">{{subtotal$ | async | currency}}</span>
+    <div class="cart__checkout">
+      <table class="cart__free">
+        <tr>
+          <td><img class="cart__check" src="/assets/icons/check.png" /></td>
+          <td class="cart__qualify">
+            Your order qualifies for FREE shipping (excludes remote locations).
+          </td>
+        </tr>
+      </table>
+
+      <div class="cart__subtotal">
+        <span class="cart__sub">Subtotal:</span
+        ><span class="cart__total">{{ subtotal$ | async | currency }}</span>
+      </div>
+      <div>
+        <input class="cart__checkbox" type="checkbox" />
+        <h3 class="cart__meta check-meta">This order contains a gift</h3>
+      </div>
+      <button class="cart__checkout-button">Proceed to Checkout</button>
     </div>
   </div>
-
-  <!-- <p>cart works!</p>
-<div *ngFor="let item of items$ | async">
-  {{ item.price }}
-</div> -->
 </div>

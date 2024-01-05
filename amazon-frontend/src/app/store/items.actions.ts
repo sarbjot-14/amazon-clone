@@ -5,5 +5,14 @@ export const add = createAction(
   '[Details Component] Add',
   props<{ item: Product }>()
 );
-// export const decrement = createAction('[Counter Component] Decrement');
-// export const reset = createAction('[Counter Component] Reset');
+
+export const update = createAction(
+  '[Cart Component] Update',
+  props<{ id: number, number: number }>()
+);
+
+export const deleteItem = createAction(
+  '[Cart Component] Delete',
+  props<{ id: number }>()
+);
+
