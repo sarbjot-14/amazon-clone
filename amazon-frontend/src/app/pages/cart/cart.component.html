@@ -1,7 +1,13 @@
 <div class="cart">
   <div class="cart__wrapper">
     <div class="cart__container">
-      <h1 class="cart__title">{{(items$ | async)?.length!=0?'Shopping Cart':'Your Amazon Cart is empty.'}}</h1>
+      <h1 class="cart__title">
+        {{
+          (items$ | async)?.length != 0
+            ? "Shopping Cart"
+            : "Your Amazon Cart is empty."
+        }}
+      </h1>
       <span class="cart__price-label">Price</span>
       <hr class="cart__divider" />
       <div class="cart__list">
@@ -33,7 +39,9 @@
         <input class="cart__checkbox" type="checkbox" />
         <h3 class="cart__meta check-meta">This order contains a gift</h3>
       </div>
-      <button class="cart__checkout-button">Proceed to Checkout</button>
+      <a routerLink="/checkout">
+        <button class="cart__checkout-button">Proceed to Checkout</button>
+      </a>
     </div>
   </div>
 </div>

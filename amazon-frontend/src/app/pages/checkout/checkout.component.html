@@ -1,0 +1,129 @@
+<div class="checkout">
+  <div class="checkout__container">
+    <div class="checkout__wrapper">
+      <div class="checkout__section">
+        <div class="checkout__title">1. Shipping Address</div>
+
+        <div class="checkout__details">
+          <h3 class="checkout__details-value">Sarbjot</h3>
+          <h3 class="checkout__details-value">11719 86 ave</h3>
+
+          <h3 class="checkout__details-value">
+            Delta, British Columbia V4C 2W2
+          </h3>
+          <h3 class="checkout__details-value">
+            <b>Or pick up near this address</b>
+          </h3>
+        </div>
+        <div class="checkout__change link">Change</div>
+      </div>
+      <hr class="checkout__section-divider" />
+      <div class="checkout__section">
+        <div class="checkout__title">2. Payment Method</div>
+
+        <div class="checkout__details">
+          <h3 class="checkout__details-value">
+            <b>Paying with Visa 2278</b>
+          </h3>
+          <h3 class="checkout__details-value">
+            Billing address: Same as shipping address
+          </h3>
+
+          <h3 class="checkout__details-value">
+            <b>Add a gift card or promotion code</b>
+          </h3>
+          <div class="checkout__code">
+            <input
+              type="text"
+              placeholder="Enter Code"
+              class="checkout__input"
+            />
+            <button class="checkout__apply">Apply</button>
+          </div>
+        </div>
+        <div class="checkout__change link">Change</div>
+      </div>
+      <hr class="checkout__section-divider" />
+      <div class="checkout__section">
+        <div class="checkout__title">3. Offers</div>
+
+        <div class="checkout__details"></div>
+      </div>
+      <hr class="checkout__section-divider" />
+      <div class="checkout__last-section">
+        <div class="checkout__title">4. Review items and shipping</div>
+
+        <div class="checkout__items">
+          <h2 class="checkout__delivery">Delivery date: Jan. 7 2024</h2>
+          <div class="cart__item" *ngFor="let item of items$ | async">
+            <app-cart-item [item]="item"></app-cart-item>
+          </div>
+        </div>
+        <div class="checkout__total-bottom">
+          <button class="checkout__order-button">Place your order</button>
+          <div>
+            <h1 class="checkout__order-header">Order Total: $234</h1>
+            <p class="checkout__terms">
+              By placing your order, you agree to Amazon's privacy notice and
+              conditions of use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkout__order">
+      <div class="checkout__order-container">
+        <button class="checkout__order-button">Place your order</button>
+        <p class="checkout__terms">
+          By placing your order, you agree to Amazon's privacy notice and
+          conditions of use.
+        </p>
+      </div>
+      <hr class="checkout__section-divider" />
+      <div class="checkout__summary-container">
+        <h1 class="checkout__summary-title">Order Summary</h1>
+        <table class="checkout__summary-table">
+          <tr>
+            <td>Items:</td>
+            <td class="checkout__summary-value">$3543</td>
+          </tr>
+          <tr>
+            <td>Shipping & Handling:</td>
+            <td class="checkout__summary-value">$3543</td>
+          </tr>
+          <tr>
+            <td>Estimated Regulatory Fees:</td>
+            <td class="checkout__summary-value">$3543</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="checkout__summary-value"><hr /></td>
+          </tr>
+          <tr>
+            <td>Total before tax:</td>
+            <td class="checkout__summary-value">$3543</td>
+          </tr>
+          <tr>
+            <td>Estimated GST/HST:</td>
+            <td class="checkout__summary-value">$3543</td>
+          </tr>
+          <tr>
+            <td>Estimated PST/RST/QST:</td>
+            <td class="checkout__summary-value">$3543</td>
+          </tr>
+          <tr>
+            <td class="checkout__summary-value">
+              <hr class="checkout__section-divider" />
+            </td>
+          </tr>
+          <tr>
+            <td><h1 class="checkout__order-header">Order Total:</h1></td>
+            <td class="checkout__summary-value">
+              <h1 class="checkout__order-header">$234</h1>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

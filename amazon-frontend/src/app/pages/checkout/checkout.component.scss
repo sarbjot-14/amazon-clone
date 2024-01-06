@@ -1,0 +1,123 @@
+.checkout {
+  padding: 0px 20px;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 90rem;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+  &__details {
+    margin-left: 10%;
+    width: 40%;
+  }
+  &__change {
+    margin-left: 10%;
+  }
+  &__apply {
+    background-color: white;
+    margin: 0px 15px;
+    border: solid 0px white;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  &__input {
+    padding: 5px;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  &__details-value {
+    line-height: 13px;
+  }
+  &__section-divider {
+    border-top: 1px solid grey;
+    width: 100%;
+  }
+  &__items {
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  &__delivery {
+    color: #19791a;
+    font-weight: 600;
+  }
+  &__total-bottom {
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__order-button {
+    border: solid 0px white;
+    background-color: #ffd815;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__order-header {
+    margin: 0px;
+    font-weight: 600;
+    color: #bd3c1f;
+  }
+  &__order {
+    width: 25%;
+    max-width: 280px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__order-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  &__terms {
+    text-align: center;
+  }
+  &__summary-container {
+    width: 100%;
+  }
+  &__summary-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  &__summary-table {
+    width: 100%;
+    font-weight: 500;
+  }
+  &__summary-value {
+    text-align: right;
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: #307384;
+  font-weight: 500;
+}
