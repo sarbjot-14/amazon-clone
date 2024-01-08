@@ -26,6 +26,7 @@ export class ProductDetailsComponent {
   quantityArr?: number[];
 
   selectedId?: string | null;
+  stockStatus?: Observable<string> ;
 
   ngOnInit() {
     this.selectedId = this.route.snapshot.paramMap.get('id');
@@ -48,6 +49,17 @@ export class ProductDetailsComponent {
       .subscribe((arr) => {
         this.quantityArr = arr.slice(1);
       });
+
+      this.stockStatus = this.product$?.pipe(map(prod=>{
+        console.log("should have worked")
+          if (prod.quantity == 0) {
+            return 'Temporarily Out Of Stock';
+          } else if (prod.quantity < 11) {
+            return `Only ${prod.quantity} left in stock.`;
+          } else {
+            return 'In Stock';
+          }
+        }))
   }
   addToCart() {
     this.product$?.subscribe((p) => {
@@ -56,4 +68,6 @@ export class ProductDetailsComponent {
       this.store.dispatch(add({ item: p }));
     });
   }
+
+
 }

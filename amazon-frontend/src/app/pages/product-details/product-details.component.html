@@ -85,12 +85,8 @@
         <span class="link">Or fastest delivery </span>
         <b>Tomorrow, January 10.</b> Order within 3 hrs 14 mins.
       </p>
-      <p class="details__status">
-        {{
-          (product$ | async)?.quantity > 0
-            ? "In Stock"
-            : "Temporarily Out Of Stock"
-        }}
+      <p class="details__status"  [ngClass]="{'details__status--green': (stockStatus | async) === 'In Stock'}">
+   {{stockStatus | async}}
       </p>
       <span class="details__quantity-label">Quantity:</span>
       <select title="Quantity" [(ngModel)]="quantitySelected">
