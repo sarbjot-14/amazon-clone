@@ -1,0 +1,42 @@
+<div class="orders">
+  <div class="orders__container">
+    <h1 class="orders__title">Your Orders</h1>
+    <div class="orders__sub">
+      <span class="orders__sub-menu link">Orders</span>
+      <span class="orders__sub-menu link">Buy Again</span>
+      <span class="orders__sub-menu link">Digital Orders</span>
+      <span class="orders__sub-menu link">Local Store Orders</span>
+      <span class="orders__sub-menu link">Cancelled Orders</span>
+    </div>
+    <hr />
+    <div class="orders__section">
+      <div class="orders__header">
+        <div class="orders__placed">
+          <span class="orders__placed--label">Orders Place</span>
+          <span class="orders__placed--value">{{ today }}</span>
+        </div>
+        <div class="orders__placed">
+          <span class="orders__placed--label">ORDER # 23K234L234SDS0SF</span>
+          <span class="orders__placed--value link">View order details</span>
+        </div>
+      </div>
+      <div class="orders__items">
+        <h1 class="orders__arriving">Arriving {{ arriving }}</h1>
+
+        <div class="orders__item" *ngFor="let i of products">
+          <div class="orders__details">
+            <img src="{{ i.thumbnail }}" alt="" class="orders__img" />
+            <h2 class="orders__item-name link">{{ i.name | titlecase}}</h2>
+          </div>
+          <div class="orders__options">
+            <button class="orders__option orders__option--accent">Track package</button>
+            <button class="orders__option">Track package</button>
+            <button class="orders__option">Cancel items</button>
+            <button class="orders__option">View or edit order</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

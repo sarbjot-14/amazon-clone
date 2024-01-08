@@ -5,6 +5,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'orders', component: OrdersComponent },
 ];
 
 @NgModule({

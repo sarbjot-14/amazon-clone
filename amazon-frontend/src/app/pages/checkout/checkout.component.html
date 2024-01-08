@@ -60,9 +60,16 @@
           </div>
         </div>
         <div class="checkout__total-bottom">
-          <button class="checkout__order-button">Place your order</button>
+          <a routerLink="/orders">
+            <button class="checkout__order-button" (click)="placeOrder()">
+              Place your order
+            </button>
+          </a>
+
           <div>
-            <h1 class="checkout__order-header">Order Total: {{(total$ | async | currency)}}</h1>
+            <h1 class="checkout__order-header">
+              Order Total: {{ total$ | async | currency }}
+            </h1>
             <p class="checkout__terms">
               By placing your order, you agree to Amazon's privacy notice and
               conditions of use.
@@ -73,7 +80,11 @@
     </div>
     <div class="checkout__order">
       <div class="checkout__order-container">
-        <button class="checkout__order-button" (click)="placeOrder()">Place your order</button>
+        <a routerLink="/orders">
+          <button class="checkout__order-button" (click)="placeOrder()">
+            Place your order
+          </button>
+        </a>
         <p class="checkout__terms">
           By placing your order, you agree to Amazon's privacy notice and
           conditions of use.
@@ -85,15 +96,19 @@
         <table class="checkout__summary-table">
           <tr>
             <td>Items:</td>
-            <td class="checkout__summary-value">{{subtotal$ | async | currency}}</td>
+            <td class="checkout__summary-value">
+              {{ subtotal$ | async | currency }}
+            </td>
           </tr>
           <tr>
             <td>Shipping & Handling:</td>
-            <td class="checkout__summary-value">{{shipping| currency}}</td>
+            <td class="checkout__summary-value">{{ shipping | currency }}</td>
           </tr>
           <tr>
             <td>Estimated Regulatory Fees:</td>
-            <td class="checkout__summary-value">{{regulatoryFees | currency}}</td>
+            <td class="checkout__summary-value">
+              {{ regulatoryFees | currency }}
+            </td>
           </tr>
           <tr>
             <td></td>
@@ -101,15 +116,21 @@
           </tr>
           <tr>
             <td>Total before tax:</td>
-            <td class="checkout__summary-value">{{(((subtotal$ | async)||0) + shipping + regulatoryFees)}}</td>
+            <td class="checkout__summary-value">
+              {{ ((subtotal$ | async) || 0) + shipping + regulatoryFees }}
+            </td>
           </tr>
           <tr>
             <td>Estimated GST/HST:</td>
-            <td class="checkout__summary-value">{{estimatedGst$ | async | currency}}</td>
+            <td class="checkout__summary-value">
+              {{ estimatedGst$ | async | currency }}
+            </td>
           </tr>
           <tr>
             <td>Estimated PST/RST/QST:</td>
-            <td class="checkout__summary-value">{{estimatedPst$ | async | currency}}</td>
+            <td class="checkout__summary-value">
+              {{ estimatedPst$ | async | currency }}
+            </td>
           </tr>
           <tr>
             <td class="checkout__summary-value">
@@ -119,7 +140,9 @@
           <tr>
             <td><h1 class="checkout__order-header">Order Total:</h1></td>
             <td class="checkout__summary-value">
-              <h1 class="checkout__order-header">{{(total$ | async | currency)}}</h1>
+              <h1 class="checkout__order-header">
+                {{ total$ | async | currency }}
+              </h1>
             </td>
           </tr>
         </table>

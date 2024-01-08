@@ -5,10 +5,12 @@
   padding: 3rem 1rem;
 
   &__thumbnail {
-    width: 25rem;
+    width: 20rem;
+    max-height: 30rem;
+    object-fit: cover;
   }
   &__info {
-    //padding-top: 2rem;
+    padding: 0% 1%;
   }
 
   &__title {
@@ -93,14 +95,13 @@
     font-size: 1rem;
   }
   &__status {
-    color: #b22823 ;
+    color: #b22823;
     font-size: 1.2rem !important;
     line-height: 24px !important;
     font-weight: 500;
   }
-  &__status--green{
-    color: #007600 ;
-
+  &__status--green {
+    color: #007600;
   }
   &__add-button {
     background-color: #ffd815;

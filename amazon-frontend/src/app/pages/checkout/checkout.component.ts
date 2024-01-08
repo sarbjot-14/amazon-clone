@@ -53,7 +53,6 @@ export class CheckoutComponent {
     );
   }
 
-
   placeOrder() {
     this.items$
       ?.pipe(
@@ -72,9 +71,9 @@ export class CheckoutComponent {
         })
       )
       .subscribe((items) => {
-      items.forEach((item) => {
-        this.ordersService.createOrders(item);
+        items.forEach((item) => {
+          this.ordersService.createOrders(item).subscribe();
+        });
       });
-    });
   }
 }

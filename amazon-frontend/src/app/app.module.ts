@@ -19,6 +19,7 @@ import { itemsReducer } from './store/items.reducer';
 import { FormsModule } from '@angular/forms';
 import { CartItemComponent } from './shared/cart-item/cart-item.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     CartComponent,
     CartItemComponent,
     CheckoutComponent,
+    OrdersComponent,
   ],
   imports: [
     FormsModule,

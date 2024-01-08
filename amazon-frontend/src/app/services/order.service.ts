@@ -11,11 +11,11 @@ export class ordersService {
   private ordersUrlDev = 'http://localhost:5244';
   constructor(private http: HttpClient) {}
 
-  createOrders(item: any): void {
-    console.log('creating orders');
-    let result = this.http.post<any>(this.ordersUrl, item);
-    result.subscribe((okay) => {
-      console.log('result is ', okay);
-    });
+  createOrders(item: any): Observable<any> {
+    return this.http.post<any>(this.ordersUrl, item);
+  }
+
+  getOrders() {
+    return this.http.get(this.ordersUrl);
   }
 }

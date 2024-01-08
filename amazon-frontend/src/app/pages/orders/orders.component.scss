@@ -1,0 +1,84 @@
+.orders {
+  &__container {
+    margin: 0% 8%;
+    padding: 20px 0px;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  &__sub {
+    display: flex;
+    gap: 10px;
+  }
+  &__sub-menu{
+
+  }
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F0F2F3;
+    padding: 15px;
+
+  }
+  &__section{
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin: 1.5rem 0rem;
+  }
+  &__arriving{
+    font-weight: 600;
+  }
+  &__items{
+    padding: 15px;
+    
+  }
+  &__placed{
+    display:flex;
+    flex-direction: column;
+  }
+  &__details{
+    display: flex;
+
+  }
+  &__img{
+    max-width: 150px;
+  }
+  &__item-name{
+    padding: 10px;
+
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+  }
+  &__options{
+    display: flex;
+    flex-direction: column;
+    min-width: 25%;
+    padding: 5px;
+    gap: 5px;
+  }
+  &__option--accent{
+    background-color: #F5D588 !important;
+    border: solid 0.1 grey;
+
+
+  }
+  &__option{
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: solid 0.1 grey;
+    background-color: #F0F2F3;
+    border-radius: 5px;
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: #307384;
+  font-weight: 500;
+}
+

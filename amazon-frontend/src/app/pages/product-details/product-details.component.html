@@ -7,7 +7,7 @@
     />
   </div>
   <div class="details__info">
-    <h1 class="details__title">{{ (product$ | async)?.name }}</h1>
+    <h1 class="details__title">{{ (product$ | async)?.name | titlecase }}</h1>
     <p class="details__visit link">
       Visit the {{ (product$ | async)?.company }} Store
     </p>
