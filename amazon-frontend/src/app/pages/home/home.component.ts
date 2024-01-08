@@ -10,22 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  /*
-  1. womens-jewellery
-  3. mens-shirts
-  4. tops
-  5. furniture
 
-  todays deals: heavily discounted
-
-  6. skincare
-  7. fragrances
-  8. laptops
-  9. smartphones
-
-
-  deals under $25
-  */
   public productDisplay1: any[] = [
     { cat: 'womens-jewellery', title: 'Browse Jewellery for Her' },
     { cat: 'mens-shirts', title: 'Great Deals on Mens Shirts' },

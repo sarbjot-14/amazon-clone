@@ -13,6 +13,8 @@ namespace OrdersService.Profiles
             CreateMap<OrderCreateDto, Order>();
             CreateMap<OrderReadDto, OrderPublishedDto>();
             CreateMap<Order, OrderPublishedDto>();
+            CreateMap<List<OrderCreateDto>, List<Order>>();
+
         }
 
 
