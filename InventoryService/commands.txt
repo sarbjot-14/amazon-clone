@@ -1,3 +1,9 @@
 docker run -p 8080:80 -d sarbjots/inventoryservice
 
  docker build -t sarbjots/inventoryservice . 
+
+
+Useful commands:
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55wOrd"
+
+kubectl rollout restart deployment inventory-depl
