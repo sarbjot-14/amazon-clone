@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
-import { Observable } from 'rxjs';
+import { Observable, debounce } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,6 +16,7 @@ export class ordersService {
   }
 
   getOrders() {
+    console.log('getting all the orders');
     return this.http.get(this.ordersUrl);
   }
 }

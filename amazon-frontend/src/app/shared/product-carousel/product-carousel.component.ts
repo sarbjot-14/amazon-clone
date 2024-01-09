@@ -22,7 +22,5 @@ export class ProductCarouselComponent {
         productArray.sort((a, b) => b.discount - a.discount)
       )
     );
-
-    this.productDeals$?.pipe(tap((p) => console.log('wth', p))).subscribe();
   }
 }

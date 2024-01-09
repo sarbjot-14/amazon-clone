@@ -43,7 +43,7 @@
     font-weight: 600;
   }
   &__details-value {
-    line-height: 13px;
+    line-height: 10px;
   }
   &__section-divider {
     border-top: 1px solid grey;
@@ -95,7 +95,9 @@
   &__order-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 90%;
+    gap: 5px;
   }
   &__terms {
     text-align: center;

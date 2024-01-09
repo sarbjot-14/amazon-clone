@@ -23,7 +23,7 @@
       <div class="orders__items">
         <h1 class="orders__arriving">Arriving {{ arriving }}</h1>
 
-        <div class="orders__item" *ngFor="let i of products">
+        <div class="orders__item" *ngFor="let i of products | async">
           <div class="orders__details">
             <img src="{{ i.thumbnail }}" alt="" class="orders__img" />
             <h2 class="orders__item-name link">{{ i.name | titlecase}}</h2>

@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { add, deleteItem, update } from './items.actions';
+import { add, clearCart, deleteItem, update } from './items.actions';
 import { Product } from '../models/product';
 
 export const initialState: Product[] = [];
@@ -36,5 +36,8 @@ export const itemsReducer = createReducer(
     let newState = state.filter((i) => i.id != payload.id);
 
     return [...newState];
+  }),
+  on(clearCart, (_) => {
+    return [];
   })
 );

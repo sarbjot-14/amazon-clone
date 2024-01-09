@@ -13,7 +13,7 @@ export class CartItemComponent {
   @Input()
   item?: Product;
 
-  quantitySelected?: number;
+  quantitySelected?: any;
 
   quantities?: number[];
 
@@ -24,7 +24,7 @@ export class CartItemComponent {
 
   onChange() {
     this.store.dispatch(
-      update({ id: this.item?.id!, number: this.quantitySelected! })
+      update({ id: this.item?.id!, number: parseInt(this.quantitySelected)  })
     );
   }
 

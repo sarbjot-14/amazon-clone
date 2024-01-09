@@ -26,7 +26,7 @@
             <b>Paying with Visa 2278</b>
           </h3>
           <h3 class="checkout__details-value">
-            Billing address: Same as shipping address
+            Billing: Same as shipping address
           </h3>
 
           <h3 class="checkout__details-value">
@@ -60,11 +60,11 @@
           </div>
         </div>
         <div class="checkout__total-bottom">
-          <a routerLink="/orders">
+      
             <button class="checkout__order-button" (click)="placeOrder()">
               Place your order
             </button>
-          </a>
+  
 
           <div>
             <h1 class="checkout__order-header">
@@ -80,11 +80,9 @@
     </div>
     <div class="checkout__order">
       <div class="checkout__order-container">
-        <a routerLink="/orders">
           <button class="checkout__order-button" (click)="placeOrder()">
             Place your order
           </button>
-        </a>
         <p class="checkout__terms">
           By placing your order, you agree to Amazon's privacy notice and
           conditions of use.

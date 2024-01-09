@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable, combineLatest, map, switchMap, tap } from 'rxjs';
+import { Observable, combineLatest, first, map, switchMap, tap } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { ordersService } from 'src/app/services/order.service';
+import { clearCart } from 'src/app/store/items.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -22,7 +24,8 @@ export class CheckoutComponent {
 
   constructor(
     private store: Store<{ items: Product[] }>,
-    private ordersService: ordersService
+    private ordersService: ordersService,
+    private router: Router
   ) {
     this.items$ = store.select('items');
     this.subtotal$ = this.items$?.pipe(
@@ -68,12 +71,17 @@ export class CheckoutComponent {
             };
           });
           return newItems;
-        })
+        }),
+        first()
       )
       .subscribe((items) => {
+        console.log('calling create orders', items);
         items.forEach((item) => {
           this.ordersService.createOrders(item).subscribe();
         });
       });
+
+    this.store.dispatch(clearCart());
+    setTimeout(() => this.router.navigate(['/orders']), 500);
   }
 }
