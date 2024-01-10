@@ -31,7 +31,7 @@ Demo: https://youtube.com/playlist?list=PLxzCb6HSo0uubPsKuPAy9dqSFemfO8Tfc&si=u1
     * Deployed RabbitMQ server
     
 
-Kubernetes Architecture:
+## Kubernetes Architecture:
 ![Screenshot 2024-01-09 at 4 08 49 PM](https://github.com/sarbjot-14/amazon-clone/assets/38801533/b562ec54-648f-4e62-9c37-c20391ee8555)
 
 
