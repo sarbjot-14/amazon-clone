@@ -41,16 +41,3 @@ Demo: https://youtube.com/playlist?list=PLxzCb6HSo0uubPsKuPAy9dqSFemfO8Tfc&si=u1
 
 
 
-
-
-Learnings:
-
-- rabbitmq
-- kubernetes
-  - deployments
-  - services
-  - ingress
-- microservice architecture
-- event driven programming
-- scopes
-- background workers
