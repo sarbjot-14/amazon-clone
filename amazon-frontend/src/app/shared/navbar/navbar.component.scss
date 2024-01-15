@@ -1,6 +1,7 @@
 .toolbar {
   background-color: #221e20;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   gap: 0.8rem;
   height: 5rem;
@@ -32,6 +33,7 @@
   &__search-container {
     flex-grow: 1;
     display: flex;
+    max-width: 1200px;
   }
   &__search {
     width: 100%;
