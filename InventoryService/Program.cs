@@ -1,9 +1,11 @@
 using InventoryService.AsyncDataServices;
 using InventoryService.Data;
 using InventoryService.EventProcessing;
+using InventoryService.Services;
 using Microsoft.EntityFrameworkCore;
 using ProductService.Data;
 using ProductService.EventProcessing;
+using StackExchange.Redis;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +43,11 @@ builder.Services.AddScoped<IProductRepo, ProductRepo>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSingleton<IEventProcessor, EventProcesing>();
 builder.Services.AddHostedService<MessageBusSubscriber>();
+
+
+builder.Services.AddSingleton<IConnectionMultiplexer>(x =>
+                ConnectionMultiplexer.Connect(builder.Configuration.GetValue<string>("RedisConnection")));
+builder.Services.AddSingleton<ICacheService, RedisCacheService>();
 
 var app = builder.Build();
 

@@ -7,3 +7,7 @@ Useful commands:
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55wOrd"
 
 kubectl rollout restart deployment inventory-depl
+
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/aws/deploy.yaml
+

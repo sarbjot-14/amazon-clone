@@ -2,6 +2,8 @@ using System.Text.Json;
 using AutoMapper;
 using InventoryService.Dto;
 using InventoryService.Models;
+using InventoryService.Services;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using ProductService.Data;
 using ProductService.EventProcessing;
 
@@ -12,10 +14,13 @@ namespace InventoryService.EventProcessing
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly IMapper _mapper;
 
-        public EventProcesing(IServiceScopeFactory scopeFactory, IMapper mapper)
+        private readonly ICacheService _cacheService;
+
+        public EventProcesing(IServiceScopeFactory scopeFactory, IMapper mapper, ICacheService cacheService)
         {
             _scopeFactory = scopeFactory;
             _mapper = mapper;
+            _cacheService = cacheService;
         }
 
 
@@ -51,7 +56,7 @@ namespace InventoryService.EventProcessing
             }
 
         }
-        private void addOrder(string orderPublishedMessage)
+        private async void addOrder(string orderPublishedMessage)
         {
             using (var scope = _scopeFactory.CreateScope())
             {
@@ -70,6 +75,9 @@ namespace InventoryService.EventProcessing
                 {
                     Console.WriteLine($"--> Could not update inventory of product {ex.Message}");
                 }
+                Console.WriteLine("deleting cache");
+                await _cacheService.DeleteKeyAsync("products");
+
             }
         }
     }
