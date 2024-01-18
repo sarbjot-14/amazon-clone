@@ -40,7 +40,10 @@ namespace OrdersService.Controllers
             {
                 throw new ArgumentNullException();
             }
+            Console.WriteLine($"we here {orderCreateDto}");
             Order newOrder = _mapper.Map<Order>(orderCreateDto);
+            Console.WriteLine($"we mapped {newOrder}");
+
             _appDbContext.Add(newOrder);
             _appDbContext.SaveChanges();
 
