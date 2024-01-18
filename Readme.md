@@ -22,7 +22,10 @@ Demo: https://youtube.com/playlist?list=PLxzCb6HSo0uubPsKuPAy9dqSFemfO8Tfc&si=u1
 
 * **Database** :
     * SQL
-  
+* **Redis** :
+    * Implemented a redis cache and deployed using kubernetes
+    * Reduced calls to sql database by caching products with redis
+   
 * **Kubernetes**
     * Deploy .NET services for product ordering and inventory management
     * Deploy SQL database with persist claim which will preserve data even if container is killed
@@ -32,7 +35,8 @@ Demo: https://youtube.com/playlist?list=PLxzCb6HSo0uubPsKuPAy9dqSFemfO8Tfc&si=u1
     
 
 ## Kubernetes Architecture:
-![Screenshot 2024-01-09 at 4 08 49 PM](https://github.com/sarbjot-14/amazon-clone/assets/38801533/b562ec54-648f-4e62-9c37-c20391ee8555)
+![Screenshot 2024-01-17 at 8 08 38 PM](https://github.com/sarbjot-14/amazon-clone/assets/38801533/40c41569-48fd-4283-95aa-493beb58cf02)
+
 
 
 
